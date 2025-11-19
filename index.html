@@ -91,7 +91,7 @@
                     throw new Error('Could not fetch quote');
                 }
                 const data = await response.json();
-                quoteDiv.textContent = data.quote || "No quote found.";
+                quoteDiv.textContent = data.quote + " -" + data.author || "No quote found.";
             } catch (error) {
                 quoteDiv.textContent = "Failed to load quote. Try again.";
             }
